@@ -8,8 +8,10 @@
       packages.x86_64-linux.default = pkgs.writeShellApplication {
         name = "template";
         text = ''
-          cp -r ${./examples} .
+          nix eval github:fricklerhandwerk/flamplate#value > value
+          cp -r ${./examples} examples
         '';
       };
+      value = 1;
     };
 }
