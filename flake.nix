@@ -8,7 +8,7 @@
       packages.x86_64-linux.default = pkgs.writeShellApplication {
         name = "template";
         text = ''
-          cp ${./example.txt} .
+          cp -r ${./examples} .
         '';
       };
     };
